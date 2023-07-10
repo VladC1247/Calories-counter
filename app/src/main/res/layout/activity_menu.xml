@@ -9,60 +9,60 @@
     android:baselineAligned="false">
 
     <Button
-        android:id="@+id/breakfast"
+        android:id="@+id/breakfast_am"
         android:layout_width="151dp"
         android:layout_height="64dp"
         android:layout_marginTop="64dp"
         android:text="Breakfast"
-        app:layout_constraintBottom_toTopOf="@+id/snack1"
+        app:layout_constraintBottom_toTopOf="@+id/snack1_am"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/snack1"
+        android:id="@+id/snack1_am"
         android:layout_width="151dp"
         android:layout_height="64dp"
         android:text="Snack"
-        app:layout_constraintBottom_toTopOf="@+id/lunch"
+        app:layout_constraintBottom_toTopOf="@+id/lunch_am"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/breakfast" />
+        app:layout_constraintTop_toBottomOf="@+id/breakfast_am" />
 
     <Button
-        android:id="@+id/lunch"
+        android:id="@+id/lunch_am"
         android:layout_width="151dp"
         android:layout_height="64dp"
         android:text="Lunch"
-        app:layout_constraintBottom_toTopOf="@+id/snack2"
+        app:layout_constraintBottom_toTopOf="@+id/snack2_am"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/snack1" />
+        app:layout_constraintTop_toBottomOf="@+id/snack1_am" />
 
     <Button
-        android:id="@+id/snack2"
+        android:id="@+id/snack2_am"
         android:layout_width="151dp"
         android:layout_height="64dp"
         android:text="Snack"
-        app:layout_constraintBottom_toTopOf="@+id/dinner"
+        app:layout_constraintBottom_toTopOf="@+id/dinner_am"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lunch" />
+        app:layout_constraintTop_toBottomOf="@+id/lunch_am" />
 
     <Button
-        android:id="@+id/dinner"
+        android:id="@+id/dinner_am"
         android:layout_width="151dp"
         android:layout_height="64dp"
         android:layout_marginBottom="25dp"
         android:text="Dinner"
-        app:layout_constraintBottom_toTopOf="@+id/calories"
+        app:layout_constraintBottom_toTopOf="@+id/calories_am"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/snack2" />
+        app:layout_constraintTop_toBottomOf="@+id/snack2_am" />
 
     <Button
-        android:id="@+id/view"
+        android:id="@+id/view_am"
         android:layout_width="151dp"
         android:layout_height="64dp"
         android:layout_marginTop="56dp"
@@ -71,17 +71,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calories" />
+        app:layout_constraintTop_toBottomOf="@+id/calories_am" />
 
     <TextView
-        android:id="@+id/calories"
+        android:id="@+id/calories_am"
         android:layout_width="217dp"
         android:layout_height="73dp"
         android:layout_marginTop="25dp"
         android:text="Calories gained today:"
-        app:layout_constraintBottom_toTopOf="@+id/view"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/view_am"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dinner" />
+        app:layout_constraintTop_toBottomOf="@+id/dinner_am" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

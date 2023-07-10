@@ -8,7 +8,7 @@
     android:background="#FF9800">
 
     <Button
-        android:id="@+id/add"
+        android:id="@+id/add_breakfast"
         android:layout_width="125dp"
         android:layout_height="75dp"
         android:layout_marginStart="284dp"
@@ -20,11 +20,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/food"
+        app:layout_constraintTop_toBottomOf="@+id/food_breakfast"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/food"
+        android:id="@+id/food_breakfast"
         android:layout_width="125dp"
         android:layout_height="75dp"
         android:layout_marginStart="50dp"
@@ -36,17 +36,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/drinks"
+        android:id="@+id/drinks_breakfast"
         android:layout_width="125dp"
         android:layout_height="75dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="50dp"
         android:text="Drinks"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/food" />
+        app:layout_constraintTop_toBottomOf="@+id/food_breakfast" />
 
     <Button
-        android:id="@+id/finish"
+        android:id="@+id/finish_breakfast"
         android:layout_width="125dp"
         android:layout_height="75dp"
         android:layout_marginStart="50dp"
@@ -55,7 +55,7 @@
         android:text="Finish"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/food"
+        app:layout_constraintTop_toBottomOf="@+id/food_breakfast"
         app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

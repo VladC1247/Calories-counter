@@ -1,2 +1,4 @@
-package com.example.myapplication;public class LunchActivity {
+package com.example.myapplication;
+
+public class LunchActivity {
 }
