@@ -21,10 +21,7 @@ public class ViewActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.d("tag","Finish button is pressed");
                 // code to be executed when button is clicked
-                Intent intent = new Intent(ViewActivity.this, MainActivity.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                startActivity(new Intent(ViewActivity.this, MainActivity.class));
+                ViewActivity.super.onBackPressed();
             }
         });
 
