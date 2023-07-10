@@ -8,11 +8,11 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class BreakfastActivity extends AppCompatActivity {
+public class Snack1Activity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.breakfast);
+        setContentView(R.layout.snack1);
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 
         Button button_finish = (Button) findViewById(R.id.finish);
@@ -21,10 +21,10 @@ public class BreakfastActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.d("tag","Finish button is pressed");
                 // code to be executed when button is clicked
-                Intent intent = new Intent(BreakfastActivity.this, MainActivity.class);
+                Intent intent = new Intent(Snack1Activity.this, MainActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                startActivity(new Intent(BreakfastActivity.this, MainActivity.class));
+                startActivity(new Intent(Snack1Activity.this, MainActivity.class));
             }
         });
 

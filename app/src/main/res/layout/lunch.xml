@@ -46,7 +46,7 @@
         app:layout_constraintTop_toBottomOf="@+id/food" />
 
     <Button
-        android:id="@+id/finish"
+        android:id="@+id/finish_lunch"
         android:layout_width="125dp"
         android:layout_height="75dp"
         android:layout_marginStart="50dp"

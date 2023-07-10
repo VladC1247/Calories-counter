@@ -9,8 +9,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity
-{
+public class MainActivity extends AppCompatActivity {
     TextView textView;
     private String layoutName;
 
@@ -28,6 +27,9 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v) {
                 Log.d("tag","Breakfast button is pressed");
                 // code to be executed when button is clicked
+                Intent intent = new Intent(MainActivity.this, BreakfastActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 startActivity(new Intent(MainActivity.this, BreakfastActivity.class));
             }
         });
@@ -38,6 +40,10 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v) {
                 Log.d("tag","Snack1 button is pressed");
                 // code to be executed when button is clicked
+                Intent intent = new Intent(MainActivity.this, Snack1Activity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                startActivity(new Intent(MainActivity.this, Snack1Activity.class));
             }
         });
 
@@ -47,6 +53,9 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v) {
                 Log.d("tag","Lunch button is pressed");
                 // code to be executed when button is clicked
+                Intent intent = new Intent(MainActivity.this, LunchActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 startActivity(new Intent(MainActivity.this, LunchActivity.class));
             }
         });
@@ -57,6 +66,10 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v) {
                 Log.d("tag","Snack2 button is pressed");
                 // code to be executed when button is clicked
+                Intent intent = new Intent(MainActivity.this, Snack2Activity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                startActivity(new Intent(MainActivity.this, Snack2Activity.class));
             }
         });
 
@@ -66,9 +79,25 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v) {
                 Log.d("tag","Dinner button is pressed");
                 // code to be executed when button is clicked
+                Intent intent = new Intent(MainActivity.this, DinnerActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                startActivity(new Intent(MainActivity.this, DinnerActivity.class));
             }
         });
 
+        Button button_view = (Button) findViewById(R.id.view_am);
+        button_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("tag","View button is pressed");
+                // code to be executed when button is clicked
+                Intent intent = new Intent(MainActivity.this, ViewActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                startActivity(new Intent(MainActivity.this, ViewActivity.class));
+            }
+        });
 
     }
 
