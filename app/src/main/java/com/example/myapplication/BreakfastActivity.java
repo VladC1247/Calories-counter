@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import java.util.ArrayList;
+import com.example.myapplication.DatabaseManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,20 +18,27 @@ public class BreakfastActivity extends AppCompatActivity {
         setContentView(R.layout.breakfast);
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 
-        Button button_finish = (Button) findViewById(R.id.finish);
-        button_finish.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d("tag","Finish button is pressed");
-                // code to be executed when button is clicked
-                Intent intent = new Intent(BreakfastActivity.this, MainActivity.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                startActivity(new Intent(BreakfastActivity.this, MainActivity.class));
+        // ...
+
+        Button buttonFood = findViewById(R.id.food);
+        TextView textViewFoodList = findViewById(R.id.foodListTextView);
+
+        buttonFood.setOnClickListener(v -> {
+            ArrayList<String> foodList = DatabaseManager.getFoodList();
+            StringBuilder foodListString = new StringBuilder();
+
+            // Construiește un șir de caractere cu elementele din lista de alimente
+            for (String food : foodList) {
+                foodListString.append(food).append("\n");
             }
+
+            // Afișează lista de alimente în TextView
+            textViewFoodList.setText(foodListString.toString());
         });
 
-        Button button_food = (Button) findViewById(R.id.food);
+
+
+    Button button_food = (Button) findViewById(R.id.food);
         button_food.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,6 +64,26 @@ public class BreakfastActivity extends AppCompatActivity {
                 // code to be executed when button is clicked
             }
         });
+
+        Button buttonfood = findViewById(R.id.food);
+        Button buttonDrinks = findViewById(R.id.drinks);
+
+        buttonFood.setOnClickListener(v -> {
+            ArrayList<String> foodList = DatabaseManager.getFoodList();
+            // Afișați lista de alimente în logcat
+            for (String food : foodList) {
+                Log.d("Food", food);
+            }
+        });
+
+        buttonDrinks.setOnClickListener(v -> {
+            ArrayList<String> drinkList = DatabaseManager.getDrinkList();
+            // Afișați lista de băuturi în logcat
+            for (String drink : drinkList) {
+                Log.d("Drink", drink);
+            }
+        });
+
     }
 
 }
