@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class MainActivity extends AppCompatActivity {
     String layoutName;
 
@@ -21,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
 
         TextView tv = findViewById(R.id.calories_am);
         tv.setText("Calories gained today:");
+
+        TextView textView=findViewById(R.id.date);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd   HH:mm");
+        String currentDateandTime = sdf.format(new Date());
+        textView.setText(currentDateandTime);
 
         Button button_breakfast = (Button) findViewById(R.id.breakfast_am);
         button_breakfast.setOnClickListener(new View.OnClickListener() {

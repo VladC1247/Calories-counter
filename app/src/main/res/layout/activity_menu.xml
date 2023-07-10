@@ -69,21 +69,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <DigitalClock
-
-        android:id="@+id/clock"
-        android:layout_width="156dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginBottom="28dp"
-        android:gravity="center"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/breakfast_am"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextSizeCheck" />
 
     <TextView
         android:id="@+id/calories_am"
@@ -95,10 +80,25 @@
         android:text="@string/calories_gained_today"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/view_am"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dinner_am" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="155dp"
+        android:layout_height="64dp"
+        android:gravity="center"
+        android:text="@string/textview"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/breakfast_am"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

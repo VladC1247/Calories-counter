@@ -8,4 +8,8 @@
     <string name="dinner">Dinner</string>
     <string name="view">View</string>
     <string name="calories_gained_today">Calories gained today:</string>
+    <string name="textview">TextView</string>
+    <string name="back">Back</string>
+    <string name="calories_gained">Calories gained</string>
+    <string name="view_window">View window</string>
 </resources>
