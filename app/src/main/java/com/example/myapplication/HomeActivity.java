@@ -7,11 +7,10 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class MainActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
     String layoutName;
 
     @Override
@@ -33,60 +32,60 @@ public class MainActivity extends AppCompatActivity {
         button_breakfast.setOnClickListener(v -> {
             Log.d("tag","Breakfast button is pressed");
             // code to be executed when button is clicked
-            Intent intent = new Intent(MainActivity.this, BreakfastActivity.class);
+            Intent intent = new Intent(HomeActivity.this, BreakfastActivity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-            startActivity(new Intent(MainActivity.this, BreakfastActivity.class));
+            startActivity(new Intent(HomeActivity.this, BreakfastActivity.class));
         });
 
         Button button_snack1 = findViewById(R.id.snack1_am);
         button_snack1.setOnClickListener(v -> {
             Log.d("tag","Snack1 button is pressed");
             // code to be executed when button is clicked
-            Intent intent = new Intent(MainActivity.this, Snack1Activity.class);
+            Intent intent = new Intent(HomeActivity.this, Snack1Activity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-            startActivity(new Intent(MainActivity.this, Snack1Activity.class));
+            startActivity(new Intent(HomeActivity.this, Snack1Activity.class));
         });
 
         Button button_lunch = findViewById(R.id.lunch_am);
         button_lunch.setOnClickListener(v -> {
             Log.d("tag","Lunch button is pressed");
             // code to be executed when button is clicked
-            Intent intent = new Intent(MainActivity.this, LunchActivity.class);
+            Intent intent = new Intent(HomeActivity.this, LunchActivity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-            startActivity(new Intent(MainActivity.this, LunchActivity.class));
+            startActivity(new Intent(HomeActivity.this, LunchActivity.class));
         });
 
         Button button_snack2 = findViewById(R.id.snack2_am);
         button_snack2.setOnClickListener(v -> {
             Log.d("tag","Snack2 button is pressed");
             // code to be executed when button is clicked
-            Intent intent = new Intent(MainActivity.this, Snack2Activity.class);
+            Intent intent = new Intent(HomeActivity.this, Snack2Activity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-            startActivity(new Intent(MainActivity.this, Snack2Activity.class));
+            startActivity(new Intent(HomeActivity.this, Snack2Activity.class));
         });
 
         Button button_dinner = findViewById(R.id.dinner_am);
         button_dinner.setOnClickListener(v -> {
             Log.d("tag","Dinner button is pressed");
             // code to be executed when button is clicked
-            Intent intent = new Intent(MainActivity.this, DinnerActivity.class);
+            Intent intent = new Intent(HomeActivity.this, DinnerActivity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-            startActivity(new Intent(MainActivity.this, DinnerActivity.class));
+            startActivity(new Intent(HomeActivity.this, DinnerActivity.class));
         });
 
         Button button_view = findViewById(R.id.view_am);
         button_view.setOnClickListener(v -> {
             Log.d("tag","View button is pressed");
             // code to be executed when button is clicked
-            Intent intent = new Intent(MainActivity.this, ViewActivity.class);
+            Intent intent = new Intent(HomeActivity.this, ViewActivity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-            startActivity(new Intent(MainActivity.this, ViewActivity.class));
+            startActivity(new Intent(HomeActivity.this, ViewActivity.class));
         });
     }
 

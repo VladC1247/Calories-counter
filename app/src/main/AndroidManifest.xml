@@ -12,11 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
-        <activity
-            android:name=".MainActivity"
+        <activity android:name=".SplashActivity"
             android:exported="true"
             android:label="Calories counter"
-            android:theme="@style/Theme.MyApplication">
+            android:theme="@style/Theme.Design.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,6 +23,13 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true"
+            android:label="Calorie counter"
+            android:theme="@style/Theme.MyApplication">
+
+        </activity>
         <activity
             android:name=".BreakfastActivity"
             android:exported="true"
@@ -35,7 +41,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".Snack1Activity"
             android:exported="true"
@@ -47,7 +52,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".LunchActivity"
             android:exported="true"
@@ -59,7 +63,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".Snack2Activity"
             android:exported="true"
@@ -71,7 +74,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".DinnerActivity"
             android:exported="true"
@@ -83,7 +85,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ViewActivity"
             android:exported="true"
@@ -95,6 +96,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
-    </manifest>
+
+</manifest>

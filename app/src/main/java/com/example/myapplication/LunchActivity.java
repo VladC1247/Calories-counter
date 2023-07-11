@@ -18,10 +18,10 @@ public class LunchActivity extends AppCompatActivity {
         button_finish.setOnClickListener(v -> {
             Log.d("tag","Finish button is pressed");
             // code to be executed when button is clicked
-            Intent intent = new Intent(LunchActivity.this, MainActivity.class);
+            Intent intent = new Intent(LunchActivity.this, HomeActivity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-            startActivity(new Intent(LunchActivity.this, MainActivity.class));
+            startActivity(new Intent(LunchActivity.this, HomeActivity.class));
         });
 
         Button button_food = (Button) findViewById(R.id.food);
