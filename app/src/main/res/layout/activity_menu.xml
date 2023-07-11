@@ -5,29 +5,28 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF5722"
+    android:background="@drawable/menu"
     android:baselineAligned="false">
 
     <Button
         android:id="@+id/breakfast_am"
         android:layout_width="151dp"
         android:layout_height="64dp"
-        android:layout_marginTop="130dp"
         android:text="@string/breakfast"
-        app:layout_constraintBottom_toTopOf="@+id/snack1_am"
+        app:layout_constraintBottom_toTopOf="@+id/view_am"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/calories_am"
+        app:layout_constraintVertical_bias="0.075" />
 
     <Button
         android:id="@+id/snack1_am"
         android:layout_width="151dp"
         android:layout_height="64dp"
         android:text="@string/snack1"
-        app:layout_constraintBottom_toTopOf="@+id/lunch_am"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/breakfast_am"
+        app:layout_constraintStart_toStartOf="@+id/breakfast_am"
         app:layout_constraintTop_toBottomOf="@+id/breakfast_am" />
 
     <Button
@@ -35,9 +34,8 @@
         android:layout_width="151dp"
         android:layout_height="64dp"
         android:text="@string/lunch"
-        app:layout_constraintBottom_toTopOf="@+id/snack2_am"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/snack1_am"
+        app:layout_constraintStart_toStartOf="@+id/snack1_am"
         app:layout_constraintTop_toBottomOf="@+id/snack1_am" />
 
     <Button
@@ -45,47 +43,48 @@
         android:layout_width="151dp"
         android:layout_height="64dp"
         android:text="@string/snack2"
-        app:layout_constraintBottom_toTopOf="@+id/dinner_am"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/lunch_am"
+        app:layout_constraintStart_toStartOf="@+id/lunch_am"
         app:layout_constraintTop_toBottomOf="@+id/lunch_am" />
 
     <Button
         android:id="@+id/dinner_am"
         android:layout_width="151dp"
         android:layout_height="64dp"
+        android:layout_marginBottom="-160dp"
         android:text="@string/dinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/view_am"
+        app:layout_constraintEnd_toEndOf="@+id/snack2_am"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/snack2_am"
         app:layout_constraintTop_toBottomOf="@+id/snack2_am" />
 
     <Button
         android:id="@+id/view_am"
         android:layout_width="151dp"
         android:layout_height="64dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginTop="161dp"
+        android:layout_marginBottom="60dp"
         android:text="@string/view"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dinner_am" />
 
 
     <TextView
         android:id="@+id/calories_am"
         android:layout_width="331dp"
         android:layout_height="152dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginBottom="77dp"
+        android:layout_marginTop="36dp"
         android:gravity="center"
         android:text="@string/calories_gained_today"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/view_am"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dinner_am" />
+        app:layout_constraintTop_toBottomOf="@+id/date" />
 
     <TextView
         android:id="@+id/date"
@@ -93,10 +92,9 @@
         android:layout_height="64dp"
         android:gravity="center"
         android:text="@string/textview"
-        android:textStyle="bold"
-        android:textSize="22sp"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/breakfast_am"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

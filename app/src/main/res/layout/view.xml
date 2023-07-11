@@ -5,7 +5,7 @@
     android:id="@+id/layout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF5722">
+    android:background="@drawable/snacks">
 
     <CalendarView
         android:id="@+id/calendarView"
