@@ -3,7 +3,6 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -26,21 +25,18 @@ public class MainActivity extends AppCompatActivity {
         tv.setText("Calories gained today:");
 
         TextView textView=findViewById(R.id.date);
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd   HH:mm");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyy   HH:mm");
         String currentDateandTime = sdf.format(new Date());
         textView.setText(currentDateandTime);
 
         Button button_breakfast = (Button) findViewById(R.id.breakfast_am);
-        button_breakfast.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d("tag","Breakfast button is pressed");
-                // code to be executed when button is clicked
-                Intent intent = new Intent(MainActivity.this, BreakfastActivity.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                startActivity(new Intent(MainActivity.this, BreakfastActivity.class));
-            }
+        button_breakfast.setOnClickListener(v -> {
+            Log.d("tag","Breakfast button is pressed");
+            // code to be executed when button is clicked
+            Intent intent = new Intent(MainActivity.this, BreakfastActivity.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            startActivity(new Intent(MainActivity.this, BreakfastActivity.class));
         });
 
         Button button_snack1 = findViewById(R.id.snack1_am);

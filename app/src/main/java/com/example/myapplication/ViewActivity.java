@@ -1,9 +1,7 @@
 package com.example.myapplication;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -20,13 +18,10 @@ public class ViewActivity extends AppCompatActivity {
         tv.setText("Calories gained today:");
 
         Button button_back = (Button) findViewById(R.id.back);
-        button_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d("tag","Finish button is pressed");
-                // code to be executed when button is clicked
-                ViewActivity.super.onBackPressed();
-            }
+        button_back.setOnClickListener(v -> {
+            Log.d("tag","Finish button is pressed");
+            // code to be executed when button is clicked
+            ViewActivity.super.onBackPressed();
         });
 
     }
