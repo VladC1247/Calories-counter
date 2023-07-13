@@ -23,12 +23,9 @@ public class SplashActivity extends AppCompatActivity {
         appname = findViewById(R.id.appname);
         lottie = findViewById(R.id.lottie);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent i = new Intent(getApplicationContext(), HomeActivity.class);
-                startActivity(i);
-            }
+        new Handler().postDelayed(() -> {
+            Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+            startActivity(i);
         }, 3000);
     }
 }

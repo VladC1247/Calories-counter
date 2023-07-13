@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +14,7 @@ import java.util.Date;
 public class HomeActivity extends AppCompatActivity {
     String layoutName;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate (Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -28,7 +30,7 @@ public class HomeActivity extends AppCompatActivity {
         String currentDateandTime = sdf.format(new Date());
         textView.setText(currentDateandTime);
 
-        Button button_breakfast = (Button) findViewById(R.id.breakfast_am);
+        Button button_breakfast = findViewById(R.id.breakfast_am);
         button_breakfast.setOnClickListener(v -> {
             Log.d("tag","Breakfast button is pressed");
             // code to be executed when button is clicked
